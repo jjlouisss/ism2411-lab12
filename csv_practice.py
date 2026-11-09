@@ -1,5 +1,15 @@
 import csv
 
+# 1. Python and Excel can both organize and clean data, but Python
+# is better for automating tasks and handling large datasets.
+# Excel is easier for quickly viewing data, making charts,
+# and doing simple calculations without writing code.
+
+# 2. A business could use append mode to keep track of daily sales
+# and revenue. Append mode is useful because it adds new records
+# without deleting previous ones, allowing the business to
+# track its performance over time.
+
 # Exercise 2
 
 with open("data/sales.csv", "r") as file:
@@ -104,7 +114,6 @@ print()
 print(f"Total Revenue: ${total_revenue:.2f}")
 print()
 # csv.reader is useful for simple CSV files when I know the column positions.
-# csv.DictReader is better when I want to access columns by name instead of index.
 
 # Exercise 7
 
