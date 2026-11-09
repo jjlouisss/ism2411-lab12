@@ -1,0 +1,15 @@
+# Exercise 1: One Customer
+
+customer = {
+    "name": "John Smith",
+    "email": "johnsmith@gmail.com",
+    "tier": "gold",
+    "ytd_spend": 1500
+}
+
+print(f"Name: {customer['name']}")
+print(f"Email: {customer['email']}")
+print(f"Tier: {customer['tier']}")
+print(f"YTD Spend: ${customer['ytd_spend']}")
+print(f"Full Customer: {customer}")
+print()
