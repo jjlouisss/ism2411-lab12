@@ -105,3 +105,53 @@ print(f"Total Revenue: ${total_revenue:.2f}")
 print()
 # csv.reader is useful for simple CSV files when I know the column positions.
 # csv.DictReader is better when I want to access columns by name instead of index.
+
+# Exercise 7
+
+sales_summary = {}
+
+with open("data/sales.csv", "r") as file:
+    reader = csv.DictReader(file)
+
+    for row in reader:
+        product = row["product"]
+        price = float(row["price"])
+        quantity = int(row["quantity"])
+
+        revenue = price * quantity
+
+        sales_summary[product] = sales_summary.get(product, 0) + revenue
+
+print()
+print("Sales Summary by Product:")
+print()
+
+for product in sorted(sales_summary):
+    print(f"{product}: ${sales_summary[product]:.2f}")
+print()
+
+# Exercise 8
+
+from datetime import datetime
+
+total_revenue = 0
+
+with open("data/sales.csv", "r") as file:
+    reader = csv.DictReader(file)
+
+    for row in reader:
+        price = float(row["price"])
+        quantity = int(row["quantity"])
+
+        revenue = price * quantity
+        total_revenue += revenue
+
+timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+with open("data/run_log.txt", "a") as log_file:
+    log_file.write(f"{timestamp} - Total Revenue: ${total_revenue:.2f}\n")
+
+print()
+print(f"Run logged at: {timestamp}")
+print(f"Total Revenue: ${total_revenue:.2f}")
+print()
