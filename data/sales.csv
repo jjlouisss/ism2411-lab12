@@ -1,15 +1,11 @@
-# Exercise 1: One Customer
-
-customer = {
-    "name": "John Smith",
-    "email": "johnsmith@gmail.com",
-    "tier": "gold",
-    "ytd_spend": 1500
-}
-
-print(f"Name: {customer['name']}")
-print(f"Email: {customer['email']}")
-print(f"Tier: {customer['tier']}")
-print(f"YTD Spend: ${customer['ytd_spend']}")
-print(f"Full Customer: {customer}")
-print()
+product,price,quantity
+Laptop,800,2
+Mouse,25,5
+Keyboard,50,3
+Monitor,200,4
+Headphones,75,6
+Webcam,60,2
+USB Cable,10,10
+Desk Lamp,40,3
+Printer,150,2
+Speaker,90,4
